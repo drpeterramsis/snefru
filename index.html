@@ -21,13 +21,12 @@
     <!-- Styles -->
     <link rel="stylesheet" href="snefru.css" />
 </head>
-<body>
+<body style="background-image: url('assets/pyramid_back.webp'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
+
   <div class="container">
     <h1>SNEFRU Toolbox</h1>
-
-    <label for="roleSelect">Select a Role:</label>
     <select id="roleSelect">
-      <option value="">-- Choose a Role --</option>
+      <option value="">-- Choose Your Role --</option>
       <option value="general">General Instructions</option>
       <option value="strategic">Strategic Leaders</option>
       <option value="builders">Builders</option>
@@ -54,9 +53,10 @@
       <div class="time-block">
         <h3>0:00</h3>
         <ul>
-          <li><label><input type="checkbox"> Receive Team Brief and resources (coins, papyrus, puzzles, tools)</label></li>
+          <li><label><input type="checkbox"> Receive Team Brief and resources (coins, papyrus, tools)</label></li>
           <li><label><input type="checkbox"> Ensure communication between Leaders and Builders</label></li>
           <li><label><input type="checkbox"> Monitor Arsenal and Granary for coin and food supply</label></li>
+          <li><label><input type="checkbox">Choosing the Capital</label></li>
         </ul>
       </div>
       <div class="time-block">
@@ -89,10 +89,6 @@
       <div class="time-block">
         <h3>0:00</h3>
         <ul><li><label><input type="checkbox"> Receive tools and start building (3D Mill, Cow, Trees, etc.)</label></li></ul>
-      </div>
-      <div class="time-block">
-        <h3>0:15</h3>
-        <ul>
           <li><label><input type="checkbox"> Continue building activities</label></li>
           <li><label><input type="checkbox"> Receive DAM materials if prophecy is solved</label></li>
         </ul>
@@ -186,6 +182,9 @@
       </div>
     </div>
   </div>
+<footer style="position: fixed; bottom: 0; width: 100%; background-color: white; color: black; text-align: center; padding: 10px; box-shadow: 0 -2px 5px rgba(0,0,0,0.2); z-index: 1000;font-size:0.6rem;">
+  SNEFRU Toolbox &copy; 2025 | Dr. Peter Ramsis | DCC5 - v 1.1
+</footer>
 
    <script src="snefru.js"></script>
 </body>
