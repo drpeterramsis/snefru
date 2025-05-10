@@ -21,3 +21,20 @@ const roleSelect = document.getElementById("roleSelect");
         checkbox.closest("label").classList.toggle("checked", checkbox.checked);
       });
     });
+
+    
+
+
+     // Save all text input changes globally to localStorage
+  document.querySelectorAll('input[type="text"]').forEach(input => {
+    const key = `snefru_input_${input.id || input.name}`;
+    
+    // Load saved value on page load
+    const savedValue = localStorage.getItem(key);
+    if (savedValue !== null) input.value = savedValue;
+
+    // Save on change
+    input.addEventListener('input', () => {
+      localStorage.setItem(key, input.value);
+    });
+  });

@@ -24,10 +24,11 @@
 <body style="background-image: url('assets/pyramid_back.webp'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
 
   <div class="container">
-    <h1>SNEFRU Toolbox</h1>
+    <h1>SNEFRU Toolbox<br><span style="font-size:1.5rem; color:black;">People of Kemet</span></h1>
     <select id="roleSelect">
-      <option value="">-- Choose Your Role --</option>
+      <option value="">-- Choose List --</option>
       <option value="general">General Instructions</option>
+      <option value="marketplace">Market Place</option>
       <option value="strategic">Strategic Leaders</option>
       <option value="builders">Builders</option>
       <option value="farmers">Farmers</option>
@@ -53,10 +54,45 @@
       <div class="time-block">
         <h3>0:00</h3>
         <ul>
-          <li><label><input type="checkbox"> Receive Team Brief and resources (coins, papyrus, tools)</label></li>
-          <li><label><input type="checkbox"> Ensure communication between Leaders and Builders</label></li>
+               <li><label><input type="checkbox">Choose Team Representative  <input type="text" id="teamNote" placeholder="name" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li>
+       
+         <li style="list-style: none; color: blue; font-style: italic;">
+      Toolkit</li>
+                <li><label><input type="checkbox">Team Brief </label></li>
+            <li><label style><input type="checkbox">Granary | Farmers</label></li>
+            <li><label><input type="checkbox">Arsenal | Workers</label></li>
+<li><label><input type="checkbox">Balance Sheet</label></li>
+
+                <li><label><input type="checkbox">Gold</label></li>
+                      <li><label><input type="checkbox">papyrus</label></li>
+                        <li><label><input type="checkbox">Pen</label></li>
+           <li style="list-style: none; color: blue; font-style: italic;">
+    Objective
+    </li>
+          <li><label><input type="checkbox">Vision</label></li>
+            <li><label><input type="checkbox">Mission</label></li>
+            <li><label><input type="checkbox">Capital</label></li>
+           <li style="list-style: none; color: darkred; font-style: italic;">
+     Ensure communication between Leaders and Builders
+    </li>
+
+
+        <li style="list-style: none; color: orangered;font-style: italic;">
+     Every 5 -mins Check the following
+    </li>
+  <div id="timerDisplay">00:00</div>
+
+  <div class="controls">
+    <button onclick="startTimer()">Start</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="stopTimer()">Stop</button>
+  </div>
+  <audio id="beep" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg" preload="auto"></audio>
+  
+
+
           <li><label><input type="checkbox"> Monitor Arsenal and Granary for coin and food supply</label></li>
-          <li><label><input type="checkbox">Choosing the Capital</label></li>
+          
         </ul>
       </div>
       <div class="time-block">
@@ -88,7 +124,26 @@
       <h2>Builders</h2>
       <div class="time-block">
         <h3>0:00</h3>
-        <ul><li><label><input type="checkbox"> Receive tools and start building (3D Mill, Cow, Trees, etc.)</label></li></ul>
+        <ul>
+          <li style="list-style: none; color: blue; font-style: italic;">
+      Toolkit</li>
+          <li><label><input type="checkbox">Team Brief </label></li>
+            <li><label><input type="checkbox">Clay, Sculpting tools</label></li>
+<li><label><input type="checkbox">Ruler</label></li>
+
+                <li><label><input type="checkbox">Gloves</label></li>
+                      <li><label><input type="checkbox">Papyrus Paper</label></li>
+                        <li><label><input type="checkbox">Pen</label></li>
+                           <li><label><input type="checkbox">Cardboard</label></li>
+                              <li><label><input type="checkbox">Scissors</label></li>
+                                 <li><label><input type="checkbox">colors</label></li>
+          
+          
+          
+          
+          
+          
+          <li><label><input type="checkbox"> Receive tools and start building (3D Mill, Cow, Trees, etc.)</label></li></ul>
           <li><label><input type="checkbox"> Continue building activities</label></li>
           <li><label><input type="checkbox"> Receive DAM materials if prophecy is solved</label></li>
         </ul>
@@ -106,10 +161,108 @@
       </div>
     </div>
 
+<!-- Market Place-->
+    <div id="marketplace" class="guide section">
+      <h2>Marketplace</h2>
+      <div class="time-block">
+        <h3>0:00</h3>
+        <ul>
+        <li><label><input type="checkbox"> 3D Mill</label></li>
+        <li><label><input type="checkbox"> Granary</label></li>
+        <li><label><input type="checkbox"> Ruler</label></li>
+        <li><label><input type="checkbox"> 3D Iron</label></li>
+        <li><label><input type="checkbox"> Arsenal</label></li>
+        <li><label><input type="checkbox"> Gloves</label></li>
+        <li><label><input type="checkbox"> 3D Cow</label></li>
+        <li><label><input type="checkbox"> 3D Trees</label></li>
+        <li><label><input type="checkbox"> Puzzle</label></li>
+        <li><label><input type="checkbox"> Stickers</label></li>
+        <li><label><input type="checkbox"> Papyrus, Papyrus Paper</label></li>
+        <li><label><input type="checkbox"> 3D Farm</label></li>
+        <li><label><input type="checkbox"> Craft paper</label></li>
+        <li><label><input type="checkbox"> Pencil</label></li>
+        <li><label><input type="checkbox"> Darts</label></li>
+        <li><label><input type="checkbox"> Pen (multiple)</label></li>
+        <li><label><input type="checkbox"> Colored Clay</label></li>
+        <li><label><input type="checkbox"> Power Cards</label></li>
+        <li><label><input type="checkbox"> Cardboard, Paper plate</label></li>
+        <li><label><input type="checkbox"> Scissors</label></li>
+        <li><label><input type="checkbox"> Glue</label></li>
+      </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:15</h3>
+       <ul>
+        <li><label><input type="checkbox"> 30 Stickers Shield</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Cheese</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Veggies</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Leather</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Spears</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Bows</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Swords</label></li>
+      </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:30</h3>
+        <ul>
+        <li><label><input type="checkbox"> 30 Stickers Cheese</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Veggies</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Bread</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Meat</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Shield</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Bows</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Swords</label></li>
+        <li><label><input type="checkbox"> 30 Stickers Leather</label></li>
+      </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:45</h3>
+        <ul>
+          <ul>
+        <li><label><input type="checkbox"> 15 Stickers Cheese</label></li>
+        <li><label><input type="checkbox"> 15 Stickers Veggies</label></li>
+        <li><label><input type="checkbox"> 15 Stickers Bread</label></li>
+        <li><label><input type="checkbox"> 15 Stickers Meat</label></li>
+      </ul>
+      </div>
+    </div>
+
+
+
+
+
+<!-- Farmers-->
+
     <div id="farmers" class="guide section">
       <h2>Farmers</h2>
       <div class="time-block">
         <h3>0:00</h3>
+
+          <li style="list-style: none; color: blue; font-style: italic;">
+      Toolkit</li>
+          <li><label><input type="checkbox">Team Brief </label></li>
+            <li><label><input type="checkbox">120 Large green Coins</label></li>
+<li><label><input type="checkbox">120 Small White Coins</label></li>
+
+                <li><label><input type="checkbox">3D Cow</label></li>
+                      <li><label><input type="checkbox">3D Farm</label></li>
+                        <li><label><input type="checkbox">Pen</label></li>
+                           <li><label><input type="checkbox">Colored Clay</label></li>
+                              <li><label><input type="checkbox">Paper plate</label></li>
+                                 <li><label><input type="checkbox">30 Stickers Cheese</label></li>
+                                   <li><label><input type="checkbox">30 Stickers Veggies</label></li>
+                                     <li><label><input type="checkbox">30 Stickers Leather</label></li>
+                                       <li><label><input type="checkbox">Craft paper</label></li>
+                                                                   <li><label><input type="checkbox">Pen</label></li>
+                                                                                               <li><label><input type="checkbox">خلة سنان</label></li>
+
+          
+
+
+
+
+
+
         <ul><li><label><input type="checkbox"> Receive Team Brief and initial food supplies (Cheese, Veggies, Bread)</label></li></ul>
       </div>
       <div class="time-block">
@@ -140,6 +293,20 @@
       <h2>Workers</h2>
       <div class="time-block">
         <h3>0:00</h3>
+
+          <li style="list-style: none; color: blue; font-style: italic;">
+      Toolkit</li>
+          <li><label><input type="checkbox">Team Brief </label></li>
+            <li><label><input type="checkbox">90 Small Yellow coins</label></li>
+<li><label><input type="checkbox">60 Small red coins</label></li>
+
+                <li><label><input type="checkbox">3D Trees</label></li>
+                      <li><label><input type="checkbox">Craft paper</label></li>
+                        <li><label><input type="checkbox">Pen</label></li>
+                           <li><label><input type="checkbox">Scissors</label></li>
+                              <li><label><input type="checkbox">Glue</label></li>
+                                 <li><label><input type="checkbox">30 Stickers Shield</label></li>
+                                   <li><label><input type="checkbox">30 Stickers Spears</label></li>
         <ul><li><label><input type="checkbox"> Receive Team Brief and Arsenal tools</label></li></ul>
       </div>
       <div class="time-block">
@@ -167,6 +334,21 @@
       <div class="time-block">
         <h3>0:00 - 0:30</h3>
         <ul>
+          <li style="list-style: none; color: blue; font-style: italic;">
+      Toolkit</li>
+          <li><label><input type="checkbox">Team Brief </label></li>
+            <li><label><input type="checkbox">Book of knowledge</label></li>
+<li><label><input type="checkbox">Prophecy Card</label></li>
+
+                <li><label><input type="checkbox">Puzzle</label></li>
+                      <li><label><input type="checkbox">Pencil</label></li>
+                        <li><label><input type="checkbox">Craft paper</label></li>
+                
+
+
+
+
+
           <li><label><input type="checkbox"> Continuously solve riddles and puzzles</label></li>
           <li><label><input type="checkbox"> Receive rewards for every 2 riddles</label></li>
           <li><label><input type="checkbox"> Receive DAM and Shaduf materials if prophecy solved</label></li>
@@ -187,5 +369,6 @@
 </footer>
 
    <script src="snefru.js"></script>
+     <script src="timer.js"></script>
 </body>
 </html>
