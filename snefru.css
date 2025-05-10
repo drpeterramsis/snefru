@@ -1,0 +1,72 @@
+:root {
+      --primary: #005a87;
+      --light: #f5f7fa;
+      --card: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --checked-color: red;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    select {
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 20px auto;
+      display: block;
+    }
+
+    .section, .guide {
+      background: var(--card);
+      box-shadow: 0 0 15px var(--shadow);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+
+    .guide {
+      display: none;
+    }
+
+    .visible {
+      display: block;
+    }
+
+    .time-block {
+      border-left: 5px solid var(--primary);
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .checked {
+      color: var(--checked-color);
+      text-decoration: line-through;
+    }

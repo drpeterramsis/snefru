@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNEFRU Toolbox</title>
+
+    <!-- PWA Manifest and Theme -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:image" content="https://drpeterramsis.github.io/snefru/icon-512x512.png" />
+    <meta property="og:image:alt" content="SNEFRU" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:title" content="SNEFRU" />
+    <meta property="og:description" content="People of Kemet - Facilitator Toolbox" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="snefru.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>SNEFRU Toolbox</h1>
+
+    <label for="roleSelect">Select a Role:</label>
+    <select id="roleSelect">
+      <option value="">-- Choose a Role --</option>
+      <option value="general">General Instructions</option>
+      <option value="strategic">Strategic Leaders</option>
+      <option value="builders">Builders</option>
+      <option value="farmers">Farmers</option>
+      <option value="workers">Workers</option>
+      <option value="riddles">Riddles Solvers</option>
+    </select>
+
+    <div id="general" class="guide section">
+      <h2>General Instructions</h2>
+      <ul>
+        <li><label><input type="checkbox"> Check Granary, Arsenal, and Stockpile every 5 mins and record in data sheet.</label></li>
+        <li><label><input type="checkbox"> If food is missing or insufficient, say: "STOP WORKING! Granary is Empty!!"</label></li>
+        <li><label><input type="checkbox"> Give Power Cards to Riddle Solvers after every 2 riddles in sequence.</label></li>
+        <li><label><input type="checkbox"> If DAM Prophecy not solved by 0:30, provide materials but deduct score.</label></li>
+        <li><label><input type="checkbox"> Builders must play "اللقال" before building the DAM.</label></li>
+        <li><label><input type="checkbox"> Workers craft 90 weapons and trade them for 2000 Gold.</label></li>
+        <li><label><input type="checkbox"> Count all stored coins and green coins with 4 stickers in Granary.</label></li>
+      </ul>
+    </div>
+
+    <div id="strategic" class="guide section">
+      <h2>Strategic Leaders</h2>
+      <div class="time-block">
+        <h3>0:00</h3>
+        <ul>
+          <li><label><input type="checkbox"> Receive Team Brief and resources (coins, papyrus, puzzles, tools)</label></li>
+          <li><label><input type="checkbox"> Ensure communication between Leaders and Builders</label></li>
+          <li><label><input type="checkbox"> Monitor Arsenal and Granary for coin and food supply</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:15</h3>
+        <ul>
+          <li><label><input type="checkbox"> Receive Pharaoh’s Message 1</label></li>
+          <li><label><input type="checkbox"> Approve team decisions and sign the balance sheet</label></li>
+          <li><label><input type="checkbox"> Receive solved puzzles and cities card from Riddle Solvers</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:30</h3>
+        <ul>
+          <li><label><input type="checkbox"> Receive Pharaoh’s Message 2</label></li>
+          <li><label><input type="checkbox"> Approve additional farm purchases for Farmers</label></li>
+          <li><label><input type="checkbox"> Prepare BOAT plan</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:45</h3>
+        <ul>
+          <li><label><input type="checkbox"> Receive Pharaoh’s Message 3</label></li>
+          <li><label><input type="checkbox"> Conduct SWOT analysis and decide on merging</label></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="builders" class="guide section">
+      <h2>Builders</h2>
+      <div class="time-block">
+        <h3>0:00</h3>
+        <ul><li><label><input type="checkbox"> Receive tools and start building (3D Mill, Cow, Trees, etc.)</label></li></ul>
+      </div>
+      <div class="time-block">
+        <h3>0:15</h3>
+        <ul>
+          <li><label><input type="checkbox"> Continue building activities</label></li>
+          <li><label><input type="checkbox"> Receive DAM materials if prophecy is solved</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:30</h3>
+        <ul>
+          <li><label><input type="checkbox"> Play "اللقال" before DAM construction</label></li>
+          <li><label><input type="checkbox"> Construct the DAM</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:45</h3>
+        <ul><li><label><input type="checkbox"> Use BOAT materials to build the Boat</label></li></ul>
+      </div>
+    </div>
+
+    <div id="farmers" class="guide section">
+      <h2>Farmers</h2>
+      <div class="time-block">
+        <h3>0:00</h3>
+        <ul><li><label><input type="checkbox"> Receive Team Brief and initial food supplies (Cheese, Veggies, Bread)</label></li></ul>
+      </div>
+      <div class="time-block">
+        <h3>0:15</h3>
+        <ul>
+          <li><label><input type="checkbox"> Receive Pharaoh’s Message 1</label></li>
+          <li><label><input type="checkbox"> Receive 30 Cheese and 30 Leather</label></li>
+          <li><label><input type="checkbox"> Receive Bread/Meat if buying new farm</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:30</h3>
+        <ul>
+          <li><label><input type="checkbox"> Confirm approval for buying farm</label></li>
+          <li><label><input type="checkbox"> Receive additional food and leather</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:45</h3>
+        <ul>
+          <li><label><input type="checkbox"> Handle Locust attack with 15 units of each item</label></li>
+          <li><label><input type="checkbox"> Prepare Dish for celebration</label></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="workers" class="guide section">
+      <h2>Workers</h2>
+      <div class="time-block">
+        <h3>0:00</h3>
+        <ul><li><label><input type="checkbox"> Receive Team Brief and Arsenal tools</label></li></ul>
+      </div>
+      <div class="time-block">
+        <h3>0:15</h3>
+        <ul>
+          <li><label><input type="checkbox"> Receive Pharaoh’s Message 1</label></li>
+          <li><label><input type="checkbox"> Receive Shields, Bows, Swords</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:30</h3>
+        <ul>
+          <li><label><input type="checkbox"> Receive DAM and Shaduf materials</label></li>
+          <li><label><input type="checkbox"> Craft 90 weapons and trade for 2000 Gold</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:45</h3>
+        <ul><li><label><input type="checkbox"> Build Chariot using materials</label></li></ul>
+      </div>
+    </div>
+
+    <div id="riddles" class="guide section">
+      <h2>Riddles Solvers</h2>
+      <div class="time-block">
+        <h3>0:00 - 0:30</h3>
+        <ul>
+          <li><label><input type="checkbox"> Continuously solve riddles and puzzles</label></li>
+          <li><label><input type="checkbox"> Receive rewards for every 2 riddles</label></li>
+          <li><label><input type="checkbox"> Receive DAM and Shaduf materials if prophecy solved</label></li>
+        </ul>
+      </div>
+      <div class="time-block">
+        <h3>0:30</h3>
+        <ul><li><label><input type="checkbox"> Prepare capital and monument name in hieroglyphs</label></li></ul>
+      </div>
+      <div class="time-block">
+        <h3>0:45</h3>
+        <ul><li><label><input type="checkbox"> Create Spell using paper and cardboard</label></li></ul>
+      </div>
+    </div>
+  </div>
+
+   <script src="snefru.js"></script>
+</body>
+</html>

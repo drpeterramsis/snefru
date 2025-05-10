@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People of Kemet</title>
+
+    <!-- PWA Manifest and Theme -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:image" content="https://drpeterramsis.github.io/people-of-kemet/icon-512x512.png" />
+    <meta property="og:image:alt" content="People of Kemet" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:title" content="People of Kemet" />
+    <meta property="og:description" content="EVA Pharma 2025 Annual Meeting" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Loading<br>People of Kemet</div>
+    </div>
+
+    <!-- Splash Screen -->
+    <div class="splash">
+
+        <video id="backgroundVideo" class="background" autoplay muted loop>
+            <source src="assets/gen_back.mp4" type="video/mp4">
+        </video>
+        
+        
+
+
+
+      <!--  <img src="assets/pyramid_back.webp" class="background" alt="Pyramid Background" /> -->
+        <div class="overlay"></div>
+ <!-- Hieroglyph Lines -->
+ <div class="hiero-line left">𓇋𓆑𓄿𓆑𓄿𓂋𓄿𓅱𓉔𓋴</div>
+ <div class="hiero-line right">𓇋𓆑𓄿𓆑𓄿𓂋𓄿𓅱𓉔𓋴</div>
+ <div class="main-content-container">
+    <!-- Change this part in index.html -->
+
+
+       
+
+        <!-- Main Content -->
+        <div class="content">
+            <img src="assets/kemet.png" class="logo centered-logo" alt="EVA Logo" />
+        </div>
+         <div class="banner">
+                         <img src="assets/kemet.png" class="logo-main" alt="EVA Logo" />
+                <table>
+                    <tr>
+                        <td colspan="2" class="header-title">
+                            <h1 class="user-name-display"></h1>
+                            <h2 class="team-display"></h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kingdom:</td>
+                        <td style="text-align:right;" class="kingdom-display"></td>
+                    </tr>
+                    <tr>
+                        <td>Date:</td>
+                        <td style="text-align:right;" class="date-display"></td>
+                    </tr>
+                    <tr>
+                        <td>Time:</td>
+                        <td style="text-align:right;" class="time-display"></td>
+                    </tr>
+                </table>
+            </div>
+        <!-- Navigation Menu -->
+        <div class="menu">
+
+            <button style="display:none; background:#f9db75" onclick="videoBrief()">Video Brief<span class="new-tab-icon"></span></button>
+<div class="button-container">
+            <button  onclick="preTrain()">Pre Training<span class="new-tab-icon"></span></button>
+            <button onclick="postTrain()">Post Training<span class="new-tab-icon"></span></button>
+
+
+</div>
+
+
+
+            <button style="display:none;" onclick="checkPassword(),teamSimulation()" id="showTeamButton">Simulation</button>
+
+<div id="teamContainer" style="display:none;">
+   <!-- Your existing team buttons (Strategic Leaders, Builders, etc.) -->
+
+    <!-- Leaders Menu -->  
+   <div style="display:none;" id="Strategic Leaders">
+    <button id="leaders-main">Leaders Brief<span class="new-tab-icon"></span></button><br>
+    <button id="builders-Responsibilities">Responsibilities<span class="new-tab-icon"></span></button>
+   </div>
+
+
+ <!-- Builders Menu -->  
+   <div style="display:none;" id="Builders">
+       <button id="builders-main">Builders<span class="new-tab-icon"></span></button><br>
+       <button id="builders-Responsibilities">Responsibilities<span class="new-tab-icon"></span></button>
+   </div>
+
+
+    <!-- Workers Menu -->  
+   <div style="display:none;" id="Workers">
+    <button id="workers-main">Workers Brief<span class="new-tab-icon"></span></button><br>
+    <button id="workers-Responsibilities">Responsibilities<span class="new-tab-icon"></span></button>
+   </div>
+
+
+    <!-- Farmers Menu -->  
+   <div style="display:none;" id="Farmers">
+    <button id="farmers-main">Farmers Brief<span class="new-tab-icon"></span></button><br>
+    <button id="farmers-Responsibilities">Responsibilities<span class="new-tab-icon"></span></button>
+   </div>
+
+     <!-- Solvers Menu -->  
+   <div style="display:none;" id="Riddles Solvers">
+    <button id="solvers-main">Solvers Brief<span class="new-tab-icon"></span></button><br>
+    <button id="solvers-Responsibilities">Responsibilities<span class="new-tab-icon"></span></button>
+   </div>
+
+     <!-- Default Menu -->  
+   <div style="display:none;" id="default2">
+    <button id="default-main">Default Brief<span class="new-tab-icon"></span></button><br>
+    <button id="default-Responsibilities">Responsibilities<span class="new-tab-icon"></span></button>
+   </div>
+</div>
+
+
+
+
+</div>
+
+<!-- Notifier Popup (password prompt) -->
+<div id="popup-overlay" class="popup-overlay" onclick="closePopup(event)"></div>
+<div id="passwordPrompt" class="popup" style="display:none;" onclick="closePopup(event)">
+    <div class="popup-content" onclick="event.stopPropagation()"> <!-- Prevent click propagation -->
+        <p>Please enter the password to access the team:</p>
+        <input type="password" id="passwordInput" placeholder="Enter password" onkeydown="checkEnter(event)">
+        <button onclick="verifyPassword()">Submit</button>
+        <button onclick="closePopup()">Close</button>
+        <p id="errorMessage" style="color:red; display:none;">Incorrect password, please try again.</p>
+    </div>
+</div>
+
+
+            
+             <!--   <button onclick="openAllTeams()">All Teams<span class="new-tab-icon"></span></button>-->
+          <!--  <button id="cycleBackgroundBtn">
+                Change Background
+              </button>-->              
+       
+        <div class="pharaoh-container">
+    <img src="assets/phar_char.webp" class="pharaoh-character" />
+</div>
+    </div></div>
+<!-- Blurred Overlay -->
+<div id="notifier-overlay" style="
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+"></div>
+
+<!-- Notifier Modal -->
+<div id="notifier" style="
+    display: none;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-height: 70%;
+    background: white;
+    padding: 10px;
+    padding-bottom: 60px; /* space for bottom button */
+    border: 2px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    z-index: 1000;
+    overflow: hidden;
+">
+
+<div class="notifier-body" style="
+    white-space: normal;
+    max-height: calc(70vh - 80px); /* Adjust based on popup height minus padding & button */
+    overflow-y: auto;
+"></div>
+
+    <!-- Bottom Fixed Close Button -->
+    <button onclick="closeNotifier()" style="
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #444;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 1001;
+    ">Close</button>
+</div>
+
+
+</div>
+<div id="popup-overlay" class="popup-overlay" onclick="closePopup(event)"></div>
+    <script src="teams-list.js"></script>
+    <script src="auth.js"></script>
+    <script src="content.js"></script>
+    <script src="eva.js"></script>
+</body>
+</html>
