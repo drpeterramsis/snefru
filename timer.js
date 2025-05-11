@@ -29,7 +29,7 @@ function startTimer1() {
     const elapsed = Math.floor((now - startTime1) / 1000);
     updateDisplay1(elapsed);
 
-    if (elapsed % 5 === 0 && elapsed !== 0) { // every 5 mins
+    if (elapsed % 300 === 0 && elapsed !== 0) { // every 5 mins
       playBeepFor4Seconds1();
       if ("vibrate" in navigator) navigator.vibrate(500);
     }
@@ -109,7 +109,7 @@ function startTimer2() {
     const elapsed = Math.floor((now - startTime2) / 1000);
     updateDisplay2(elapsed);
 
-    if (elapsed % 5 === 0 && elapsed !== 0) { // every 5 mins
+    if (elapsed % 300 === 0 && elapsed !== 0) { // every 5 mins
       playBeepFor4Seconds2();
       if ("vibrate" in navigator) navigator.vibrate(500);
     }
