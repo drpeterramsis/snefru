@@ -27,7 +27,6 @@
     <h1>SNEFRU Toolbox<br><span style="font-size:1.5rem; color:black;">People of Kemet</span></h1>
     <select id="roleSelect">
       <option value="">-- Choose List --</option>
-      <option value="general">General Instructions</option>
       <option value="marketplace">Market Place</option>
       <option value="strategic">Strategic Leaders</option>
       <option value="builders">Builders</option>
@@ -39,8 +38,6 @@
     <div id="general" class="guide section">
       <h2>General Instructions</h2>
       <ul>
-        <li><label><input type="checkbox"> Check Granary, Arsenal, and Stockpile every 5 mins and record in data sheet.</label></li>
-        <li><label><input type="checkbox"> If food is missing or insufficient, say: "STOP WORKING! Granary is Empty!!"</label></li>
         <li><label><input type="checkbox"> Give Power Cards to Riddle Solvers after every 2 riddles in sequence.</label></li>
         <li><label><input type="checkbox"> If DAM Prophecy not solved by 0:30, provide materials but deduct score.</label></li>
         <li><label><input type="checkbox"> Builders must play "اللقال" before building the DAM.</label></li>
@@ -62,16 +59,16 @@
                 <li><label><input type="checkbox">Team Brief </label></li>
             <li><label style><input type="checkbox">Granary | Farmers</label></li>
             <li><label><input type="checkbox">Arsenal | Workers</label></li>
-<li><label><input type="checkbox">Balance Sheet</label></li>
+<li><label><input type="checkbox">Balance Sheet [1000 Coins]</label></li>
 
                 <li><label><input type="checkbox">Gold</label></li>
-                      <li><label><input type="checkbox">papyrus</label></li>
+                      <li><label><input type="checkbox">Papyrus</label></li>
                         <li><label><input type="checkbox">Pen</label></li>
                         <p></p>
            <li style="list-style: none; color: blue; font-style: italic;">
     Objective
     </li>
-          <li><label><input type="checkbox">Vision</label></li>
+          <li><label><input type="checkbox">Vision --> Builders</label></li>
             <li><label><input type="checkbox">Mission</label></li>
             <li><label><input type="checkbox">Capital</label></li>
             <p></p>
@@ -97,7 +94,7 @@
 
        <li><label><input type="checkbox">Granary <span style="list-style: none; color: green;font-style: italic;">[10 Green Coins / 5 mins]<input type="text" id="gra_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
             <li style="list-style: none; color: orangered;font-style: italic;">
-     if empty --> raise sad SNEFRU [STOP WORKING]
+     if empty --> raise Sad & Angry SNEFRU [STOP WORKING]
     </li>
        <li><label><input type="checkbox">Arsenal <span style="list-style: none; color: green;font-style: italic;">[10 White Coins / 5 mins]</span><input type="text" id="ars_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
           
@@ -131,7 +128,7 @@
     <div id="builders" class="guide section">
       <h2>Builders</h2>
       <div class="time-block">
-        <h3>0:00</h3>
+        <h3>0:00 [30 mins]</h3>
         <ul>
           <li style="list-style: none; color: blue; font-style: italic;">
       Toolkit</li>
@@ -196,42 +193,10 @@
         <li><label><input type="checkbox"> Cardboard, Paper plate</label></li>
         <li><label><input type="checkbox"> Scissors</label></li>
         <li><label><input type="checkbox"> Glue</label></li>
+         <li><label><input type="checkbox"> 30 Large Green coins + 30 white coins [Cow Powercard]</label></li>
+                  <li><label><input type="checkbox"> 50 Red Coins [Swords Powercard]</label></li>
       </ul>
       </div>
-      <div class="time-block">
-        <h3>0:15</h3>
-       <ul>
-        <li><label><input type="checkbox"> 30 Stickers Shield</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Cheese</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Veggies</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Leather</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Spears</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Bows</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Swords</label></li>
-      </ul>
-      </div>
-      <div class="time-block">
-        <h3>0:30</h3>
-        <ul>
-        <li><label><input type="checkbox"> 30 Stickers Cheese</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Veggies</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Bread</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Meat</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Shield</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Bows</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Swords</label></li>
-        <li><label><input type="checkbox"> 30 Stickers Leather</label></li>
-      </ul>
-      </div>
-      <div class="time-block">
-        <h3>0:45</h3>
-        <ul>
-          <ul>
-        <li><label><input type="checkbox"> 15 Stickers Cheese</label></li>
-        <li><label><input type="checkbox"> 15 Stickers Veggies</label></li>
-        <li><label><input type="checkbox"> 15 Stickers Bread</label></li>
-        <li><label><input type="checkbox"> 15 Stickers Meat</label></li>
-      </ul>
       </div>
     </div>
 
@@ -271,21 +236,22 @@
 
 
 
-        <ul><li><label><input type="checkbox"> Receive Team Brief and initial food supplies (Cheese, Veggies, Bread)</label></li></ul>
+        <ul><li><label><input type="checkbox"> Receive Team Brief and initial food supplies (Cheese, Veggies, Bread) (adding stickers)</label></li></ul>
       </div>
       <div class="time-block">
         <h3>0:15</h3>
         <ul>
           <li><label><input type="checkbox"> Receive Pharaoh’s Message 1</label></li>
           <li><label><input type="checkbox"> Receive 30 Cheese and 30 Leather</label></li>
-          <li><label><input type="checkbox"> Receive Bread/Meat if buying new farm</label></li>
+          <li><label><input type="checkbox"> Receive Bread/Meat based on their desicion</label></li>
         </ul>
       </div>
       <div class="time-block">
         <h3>0:30</h3>
         <ul>
           <li><label><input type="checkbox"> Confirm approval for buying farm</label></li>
-          <li><label><input type="checkbox"> Receive additional food and leather</label></li>
+          <li><label><input type="checkbox"> Receive additional food and leather
+           30 stickers from 4 types</label></li>
         </ul>
       </div>
       <div class="time-block">
@@ -318,13 +284,14 @@
 
                                     <li style="list-style: none; color: blue; font-style: italic;">
       Objective</li>
-        <ul><li><label><input type="checkbox">Stockpile for Leather: Just check the availability of white coins with leather</label></li></ul>
+        <ul><li><label><input type="checkbox">Stockpile for Leather: Just check the availability of white coins with leather from the farmers</label></li></ul>
       </div>
       <div class="time-block">
         <h3>0:15</h3>
         <ul>
           <li><label><input type="checkbox"> Receive Pharaoh’s Message 1</label></li>
-          <li><label><input type="checkbox"> Receive Shields, Bows, Swords</label></li>
+          <li><label><input type="checkbox"> Receive 30 Shields,30 Bows, </label></li>
+          <li><label><input type="checkbox"> Receive 30 Swords based on their desicion</label></li>
         </ul>
       </div>
       <div class="time-block">
@@ -343,7 +310,7 @@
     <div id="riddles" class="guide section">
       <h2>Riddles Solvers</h2>
       <div class="time-block">
-        <h3>0:00 - 0:30</h3>
+        <h3>0:00 [30 mins]</h3>
         <ul>
           <li style="list-style: none; color: blue; font-style: italic;">
       Toolkit</li>
@@ -359,15 +326,16 @@
 
 
 
-
+    <li><label><input type="checkbox"> Capital Puzzle --> leaders to confirm the capital</label></li>
+        <li><label><input type="checkbox">Book of Knowledge --> recieve power cards</label></li>
+                <li><label><input type="checkbox">Prophecy Solved--> give DAM  materials to builders and Shaduf materials to workers </label></li>
           <li><label><input type="checkbox"> Continuously solve riddles and puzzles</label></li>
-          <li><label><input type="checkbox"> Receive rewards for every 2 riddles</label></li>
-          <li><label><input type="checkbox"> Receive DAM and Shaduf materials if prophecy solved</label></li>
+          <li><label><input type="checkbox"> Receive Powercards for every 2 riddles</label></li>
         </ul>
       </div>
       <div class="time-block">
         <h3>0:30</h3>
-        <ul><li><label><input type="checkbox"> Prepare capital and monument name in hieroglyphs</label></li></ul>
+        <ul><li><label><input type="checkbox"> Prepare capital and monument name in hieroglyphs [based on time]</label></li></ul>
       </div>
       <div class="time-block">
         <h3>0:45</h3>
@@ -376,7 +344,7 @@
     </div>
   </div>
 <footer style="position: fixed; bottom: 0; width: 100%; background-color: white; color: black; text-align: center; padding: 10px; box-shadow: 0 -2px 5px rgba(0,0,0,0.2); z-index: 1000;font-size:0.6rem;">
-  SNEFRU Toolbox &copy; 2025 | Dr. Peter Ramsis | DCC5 - v 1.5
+  &copy; 2025 | Dr. Peter Ramsis | DCC5 - v 1.5
 </footer>
 
    <script src="snefru.js"></script>

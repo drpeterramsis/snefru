@@ -27,7 +27,7 @@ let interval = null;
       const elapsed = Math.floor((now - startTime) / 1000);
       updateDisplay(elapsed);
 
-      if (elapsed % 5 === 0 && elapsed !== 0) { // every 5 mins
+      if (elapsed % 300 === 0 && elapsed !== 0) { // every 5 mins
         playBeepFor4Seconds();
         if ("vibrate" in navigator) navigator.vibrate(500);
       }
