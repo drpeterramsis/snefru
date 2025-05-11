@@ -81,7 +81,7 @@
 
 <P></P>
         <li style="list-style: none; color: orangered;font-style: italic;">
-     Every 5 -mins Check the following
+     Every 5-mins  Monitor Arsenal and Granary for coin and food supply
     </li>
   <div id="timerDisplay">00:00</div>
 
@@ -95,9 +95,11 @@
   <audio id="beep" src="https://actions.google.com/sounds/v1/alarms/medium_bell_ringing_near.ogg" preload="auto"></audio>
   
 
-       <li><label><input type="checkbox">Granary</label></li>
-       <li><label><input type="checkbox">Arsenal</label></li>
-          <li><label><input type="checkbox"> Monitor Arsenal and Granary for coin and food supply</label></li>
+       <li><label><input type="checkbox">Granary <span style="list-style: none; color: green;font-style: italic;">[10 Green Coins / 5 mins]<input type="text" id="gra_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
+            <li style="list-style: none; color: orangered;font-style: italic;">
+     if empty --> raise sad SNEFRU [STOP WORKING]
+    </li>
+       <li><label><input type="checkbox">Arsenal <span style="list-style: none; color: green;font-style: italic;">[10 White Coins / 5 mins]</span><input type="text" id="ars_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
           
         </ul>
       </div>
@@ -313,7 +315,10 @@
                               <li><label><input type="checkbox">Glue</label></li>
                                  <li><label><input type="checkbox">30 Stickers Shield</label></li>
                                    <li><label><input type="checkbox">30 Stickers Spears</label></li>
-        <ul><li><label><input type="checkbox"> Receive Team Brief and Arsenal tools</label></li></ul>
+
+                                    <li style="list-style: none; color: blue; font-style: italic;">
+      Objective</li>
+        <ul><li><label><input type="checkbox">Stockpile for Leather: Just check the availability of white coins with leather</label></li></ul>
       </div>
       <div class="time-block">
         <h3>0:15</h3>
@@ -371,7 +376,7 @@
     </div>
   </div>
 <footer style="position: fixed; bottom: 0; width: 100%; background-color: white; color: black; text-align: center; padding: 10px; box-shadow: 0 -2px 5px rgba(0,0,0,0.2); z-index: 1000;font-size:0.6rem;">
-  SNEFRU Toolbox &copy; 2025 | Dr. Peter Ramsis | DCC5 - v 1.1
+  SNEFRU Toolbox &copy; 2025 | Dr. Peter Ramsis | DCC5 - v 1.5
 </footer>
 
    <script src="snefru.js"></script>
