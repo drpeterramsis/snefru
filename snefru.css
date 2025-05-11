@@ -109,7 +109,17 @@ li {
 }
 
 
-    #timerDisplay {
+    #timerDisplay1 {
+      font-size: 36px;
+      margin: 20px;
+      padding: 10px 20px;
+      border: 2px solid green;
+      border-radius: 10px;
+      background: #fff;
+      text-align: center;
+    }
+
+       #timerDisplay2 {
       font-size: 36px;
       margin: 20px;
       padding: 10px 20px;
