@@ -23,8 +23,27 @@
 </head>
 <body style="background-image: url('assets/pyramid_back.webp'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
 
-  <div class="container">
+  
     <h1>SNEFRU Toolbox<br><span style="font-size:1.5rem; color:black;">People of Kemet</span></h1>
+<div class="container">
+  <!-- First Row with Market Place and Strategic Leaders buttons -->
+  <div id="roleButtons">
+    <button class="role-btn" data-value="marketplace" style="background-color: grey;">Market Place</button>
+    <button class="role-btn" data-value="strategic" style="background-color: #c0392b;">Strategic Leaders</button>
+  </div>
+  
+  <!-- Second Row with the remaining buttons -->
+  <div id="secondRow">
+    <button class="role-btn" data-value="builders" style="background-color: #e67e22;">Builders</button>
+    <button class="role-btn" data-value="farmers" style="background-color: #27ae60;">Farmers</button>
+    <button class="role-btn" data-value="workers" style="background-color: rgb(88, 4, 4);">Workers</button>
+    <button class="role-btn" data-value="riddles" style="background-color: #2980b9;">Riddles Solvers</button>
+  </div></div>
+
+
+
+<input type="hidden" id="selectedRole" name="selectedRole" />
+
     <select id="roleSelect">
       <option value="">-- Choose List --</option>
       <option value="marketplace">Market Place</option>
@@ -51,7 +70,7 @@
       <div class="time-block">
         <h3>0:00</h3>
         <ul>
-               <li><label><input type="checkbox">Choose Team Representative  <input type="text" id="teamNote" placeholder="name" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li>
+               <li><label><input type="checkbox">Choose Team Representative  <input type="text" id="teamNote" placeholder="name" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic; display:none;" /></label>        </li>
        <p></p>
          <li style="list-style: none; color: blue; font-style: italic;">
       Toolkit</li>
@@ -76,27 +95,8 @@
      Ensure communication between Leaders and Builders
     </li>
 
-<P></P>
-        <li style="list-style: none; color: orangered;font-style: italic;">
-     Every 5-mins  Monitor Arsenal and Granary for coin and food supply
-    </li>
-  <div id="timerDisplay">00:00</div>
 
-  <div class="controls">
   
-  <button id="startPauseBtn" onclick="toggleStartPause()">Start</button>
-  <button onclick="stopTimer()">Stop</button>
-  <button onclick="silenceAlarm()" id="silenceBtn" style="display: none;">Silence Alarm</button>
-
-  </div>
-  <audio id="beep" src="https://actions.google.com/sounds/v1/alarms/medium_bell_ringing_near.ogg" preload="auto"></audio>
-  
-
-       <li><label><input type="checkbox">Granary <span style="list-style: none; color: green;font-style: italic;">[10 Green Coins / 5 mins]<input type="text" id="gra_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
-            <li style="list-style: none; color: orangered;font-style: italic;">
-     if empty --> raise Sad & Angry SNEFRU [STOP WORKING]
-    </li>
-       <li><label><input type="checkbox">Arsenal <span style="list-style: none; color: green;font-style: italic;">[10 White Coins / 5 mins]</span><input type="text" id="ars_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
           
         </ul>
       </div>
@@ -130,6 +130,7 @@
       <div class="time-block">
         <h3>0:00 [30 mins]</h3>
         <ul>
+                         <li><label><input type="checkbox">Choose Team Representative  <input type="text" id="teamNote" placeholder="name" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic; display:none;" /></label>        </li>
           <li style="list-style: none; color: blue; font-style: italic;">
       Toolkit</li>
           <li><label><input type="checkbox">Team Brief </label></li>
@@ -200,17 +201,13 @@
       </div>
     </div>
 
-
-
-
-
 <!-- Farmers-->
 
     <div id="farmers" class="guide section">
       <h2>Farmers</h2>
       <div class="time-block">
         <h3>0:00</h3>
-
+               <li><label><input type="checkbox">Choose Team Representative  <input type="text" id="teamNote" placeholder="name" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic; display:none;" /></label>        </li>
           <li style="list-style: none; color: blue; font-style: italic;">
       Toolkit</li>
           <li><label><input type="checkbox">Team Brief </label></li>
@@ -236,7 +233,33 @@
 
 
 
-        <ul><li><label><input type="checkbox"> Receive Team Brief and initial food supplies (Cheese, Veggies, Bread) (adding stickers)</label></li></ul>
+        <ul><li><label><input type="checkbox"> Receive Team Brief and initial food supplies (Cheese, Veggies, Bread) (adding stickers)</label></li>
+        
+          <P></P>
+        <li style="list-style: none; color: orangered;font-style: italic;">
+     Every 5-mins  Monitor Granary
+    </li>
+        <div id="timerDisplay">00:00</div>
+
+  <div class="controls">
+  
+  <button id="startPauseBtn" onclick="toggleStartPause()">Start</button>
+  <button onclick="stopTimer()">Stop</button>
+  <button onclick="silenceAlarm()" id="silenceBtn" style="display: none;">Silence Alarm</button>
+
+  </div>
+  <audio id="beep" src="https://actions.google.com/sounds/v1/alarms/medium_bell_ringing_near.ogg" preload="auto"></audio>
+  
+
+       <li><label><input type="checkbox">Granary <span style="list-style: none; color: green;font-style: italic;">[10 Green Coins / 5 mins]<input type="text" id="gra_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
+            <li style="list-style: none; color: orangered;font-style: italic;">
+     if empty --> raise Sad & Angry SNEFRU [STOP WORKING]
+    </li>
+        
+        
+        
+        
+        </ul>
       </div>
       <div class="time-block">
         <h3>0:15</h3>
@@ -267,7 +290,7 @@
       <h2>Workers</h2>
       <div class="time-block">
         <h3>0:00</h3>
-
+               <li><label><input type="checkbox">Choose Team Representative  <input type="text" id="teamNote" placeholder="name" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic; display:none;" /></label>        </li>
           <li style="list-style: none; color: blue; font-style: italic;">
       Toolkit</li>
           <li><label><input type="checkbox">Team Brief </label></li>
@@ -284,7 +307,31 @@
 
                                     <li style="list-style: none; color: blue; font-style: italic;">
       Objective</li>
-        <ul><li><label><input type="checkbox">Stockpile for Leather: Just check the availability of white coins with leather from the farmers</label></li></ul>
+        <ul><li><label><input type="checkbox">Stockpile for Leather: Just check the availability of white coins with leather from the farmers</label></li>
+        
+                <P></P>
+        <li style="list-style: none; color: orangered;font-style: italic;">
+     Every 5-mins  Monitor Arsenal
+    </li>
+        <div id="timerDisplay">00:00</div>
+
+  <div class="controls">
+  
+  <button id="startPauseBtn" onclick="toggleStartPause()">Start</button>
+  <button onclick="stopTimer()">Stop</button>
+  <button onclick="silenceAlarm()" id="silenceBtn" style="display: none;">Silence Alarm</button>
+
+  </div>
+  <audio id="beep" src="https://actions.google.com/sounds/v1/alarms/medium_bell_ringing_near.ogg" preload="auto"></audio>
+  
+
+       <li><label><input type="checkbox">Arsenal <span style="list-style: none; color: green;font-style: italic;">[10 White Coins / 5 mins]</span><input type="text" id="ars_count" placeholder="Count" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic;" /></label>        </li></span></label></li>
+        
+        
+        
+        
+        
+        </ul>
       </div>
       <div class="time-block">
         <h3>0:15</h3>
@@ -312,6 +359,7 @@
       <div class="time-block">
         <h3>0:00 [30 mins]</h3>
         <ul>
+                         <li><label><input type="checkbox">Choose Team Representative  <input type="text" id="teamNote" placeholder="name" style="margin-left:10px; width:90%;color:darkgreen; font-weight:bold;font-style: italic; display:none;" /></label>        </li>
           <li style="list-style: none; color: blue; font-style: italic;">
       Toolkit</li>
           <li><label><input type="checkbox">Team Brief </label></li>

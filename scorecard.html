@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Scorecard</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 500px; margin: auto; }
+    input { margin: 5px; padding: 5px; width: 150px; }
+    button { padding: 6px 12px; margin: 5px; }
+    ul { list-style: none; padding-left: 0; }
+    li { margin: 6px 0; padding: 4px; background: #f0f0f0; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Shared Scorecard</h1>
+  <ul id="scoreList">Loading...</ul>
+
+  <input type="text" id="name" placeholder="Team">
+  <input type="number" id="score" placeholder="Score">
+  <button onclick="addScore()">Submit</button>
+
+  <script>
+    const apiKey = 'pat9JqRlJ6yvuVJvf.914c69a718dc30d6b87a26739ab20be16817df3e77f0d657ec82092d0e3cf508';
+    const baseId = 'app2nUFigAuVfdyoG';
+    const tableName = 'scorecard';
+    const apiUrl = `https://api.airtable.com/v0/${baseId}/${tableName}`;
+
+    async function loadScores() {
+      try {
+        const res = await fetch(apiUrl, {
+          headers: {
+            Authorization: `Bearer ${apiKey}`
+          }
+        });
+        const data = await res.json();
+        const list = document.getElementById('scoreList');
+        list.innerHTML = '';
+        data.records.forEach(rec => {
+          const li = document.createElement('li');
+          li.textContent = `${rec.fields.Team} - ${rec.fields.Score}`;
+          list.appendChild(li);
+        });
+      } catch (err) {
+        alert('Error loading scores: ' + err.message);
+        console.error(err);
+      }
+    }
+
+    async function addScore() {
+      const name = document.getElementById('name').value;
+      const score = parseInt(document.getElementById('score').value);
+
+      if (!name || isNaN(score)) {
+        alert("Please enter both team name and a valid score.");
+        return;
+      }
+
+      try {
+        const res = await fetch(apiUrl, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            fields: {
+              Team: name,
+              Score: score
+            }
+          })
+        });
+
+        const result = await res.json();
+
+        if (!res.ok) {
+          console.error('Airtable API error:', result);
+          alert('Error adding score: ' + (result.error?.message || res.statusText));
+        } else {
+          console.log('Success:', result);
+          loadScores();
+          document.getElementById('name').value = '';
+          document.getElementById('score').value = '';
+        }
+      } catch (err) {
+        alert('Network error: ' + err.message);
+        console.error(err);
+      }
+    }
+
+    loadScores();
+  </script>
+</body>
+</html>

@@ -63,7 +63,6 @@ h1, h2, h3 {
 
 h1 {
     text-align: center;
-    margin-bottom: 40px;
 }
 
 select {
@@ -73,6 +72,7 @@ select {
     margin: 0 auto 20px auto;
     display: block;
     border-radius: 10px;
+    display:none;
 }
 
 .section, .guide {
@@ -80,7 +80,6 @@ select {
     box-shadow: 0 0 15px var(--shadow);
     border-radius: 10px;
     padding: 30px;
-    margin-bottom: 40px;
 }
 
 .guide {
@@ -90,7 +89,6 @@ select {
 .visible {
     display: block;
 }
-
 .time-block {
     border-left: 5px solid var(--primary);
     padding-left: 20px;
@@ -132,3 +130,96 @@ li {
       border-radius: 10px;
       cursor: pointer;
     }
+
+  .role-btn {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .role-btn.selected {
+    box-shadow: 0 0 5px 2px #00000088;
+    outline: 2px solid #fff;
+  }
+
+
+
+  .guide.section {
+  display: none;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#roleButtons {
+  display: flex;
+  width: 100%; /* Ensures the buttons fill the entire container width */
+  gap: 10px; /* Adds some space between buttons */
+}
+
+.role-btn {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  flex: 1; /* Makes buttons take up equal space within their parent container */
+  max-width: 48%; /* Ensures the buttons do not stretch too wide */
+  text-align: center;
+}
+
+.role-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+#secondRow {
+  display: flex;
+  flex-wrap: wrap; /* Allows the buttons to wrap onto the next row if necessary */
+  gap: 5px;
+  width: 100%; /* Ensures buttons fill the available space */
+}
+
+#secondRow .role-btn {
+  flex: 1;
+  max-width: 20%; /* Makes the buttons in the second row take up less space */
+}
+
+.role-btn {
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  transition: background-color 0.3s, transform 0.2s ease; /* Adds smooth transition */
+}
+
+.role-btn.selected {
+    border: 3px solid black;  /* Adds a solid white border */
+    box-shadow: 0 0 3px 3px yellow;  /* Adds a yellow box shadow */
+    outline: 2px solid #fff;  /* Keeps the outline for focus effect */
+    background-color: var(--primary);  /* Change the background color when selected */
+    transform: scale(1.05);  /* Slightly enlarge the button when selected */
+}
+
+
+/* Optional: Add a hover effect for better UX */
+.role-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.role-btn:focus {
+  outline: none; /* Remove focus outline */
+}
